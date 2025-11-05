@@ -25,7 +25,7 @@ def check_matches(words, hashes):
     Returns a list of (word, hashed_word) tuples for matches.
     """
     matches = []
-    hash_set = set(hashes)  # faster membership checks
+    hash_set = set(hashes)  
     for word in words:
         hashed_word = hashlib.md5(word.encode("utf-8")).hexdigest()
         if hashed_word in hash_set:
